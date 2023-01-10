@@ -3,7 +3,7 @@ import { ClientProps } from '../../types';
 
 class CreateClientService {
 	async execute(client: ClientProps) {
-		const createClient = await Client.create(client);
+		const createClient = Client.create(client);
 		return createClient;
 	}
 }
