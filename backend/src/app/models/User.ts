@@ -12,5 +12,9 @@ export const User = model<UserProps>('User', new Schema<UserProps>({
 		type: String,
 		required: true,
 		minlength: 3  
+	},
+	email: {
+		type: String,
+		require: true
 	}
 }));
