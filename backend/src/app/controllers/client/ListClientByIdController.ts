@@ -18,4 +18,4 @@ class ListClientByIdController {
 	}
 }
 
-export const ListClientById = new ListClientByIdController().handle;
+export const listClientById = new ListClientByIdController().handle;
