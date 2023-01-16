@@ -8,23 +8,22 @@ import { UserProps } from '../../types';
 
 class AuthUserController {
 	async handle(req: Request, res: Response) {
-		
 		const { user, password, email }: UserProps = req.body;
 		const authUserService = new AuthUserService();
-
+	
 		const userData = await User.findOne({ 
 			$or: [
 				{ email: email }, 
 				{ user: user }
 			]
 		});
-		
+			
 		if (!userData) throw new BadRequestException('User or password is incorrect!');
 		const passwordMatch = await compare(password, userData.password);
 		if (!passwordMatch) throw new BadRequestException('User or password is incorrect!');
-
+	
 		const auth = await authUserService.execute(userData);
-
+	
 		return res.json(auth);
 	}
 }

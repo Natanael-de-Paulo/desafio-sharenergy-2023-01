@@ -30,8 +30,7 @@ class CreateUserController {
     
 			res.status(201).json(newUser);
 		} catch (error) {
-			console.error(error);
-			res.send(error);
+			console.log(error);
 		}
 	}
 }
