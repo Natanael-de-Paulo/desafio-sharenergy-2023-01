@@ -7,7 +7,7 @@ interface TextProps{
 }
 
 export function Text({ isChild, children }: TextProps){
-	const Comp = isChild ? Slot  :  'span';
+	const Comp = isChild? Slot : 'span';
   
 	return (
 		<Comp>

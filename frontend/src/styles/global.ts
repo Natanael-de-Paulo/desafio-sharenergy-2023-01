@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-family: 'Roboto', Helvetica, sans-serif;
   }
 
