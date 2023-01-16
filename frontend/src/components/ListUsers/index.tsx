@@ -11,7 +11,7 @@ export function ListUsers ({ users }: Props) {
 
 	return (
 		<Container>
-			{users.map(data => (
+			{ users.map(data => (
 				<article key={data.user.id}>
 					<img src={data.picture.large} alt={`foto de ${data.name.title} ${data.name.first} ${data.name.last}`} />
 
@@ -39,6 +39,7 @@ export function ListUsers ({ users }: Props) {
 					</ul>
 				</article>
 			))}
+    
 		</Container>
 	);
 }

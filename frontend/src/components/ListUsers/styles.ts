@@ -1,20 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1120px;
+  margin-top: 5em;
   width: 100%;
-  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2em;
-  padding: 2em;
-
-  @media screen {
-    padding: 1em;
-  }
 
 
   article{

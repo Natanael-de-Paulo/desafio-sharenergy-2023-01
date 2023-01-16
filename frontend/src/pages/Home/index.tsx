@@ -1,8 +1,11 @@
 import {useState, useEffect} from 'react';
+import { MdOutlineSearch } from 'react-icons/md';
+import { Inp } from '../../components/Input/styles';
 import { ListUsers } from '../../components/ListUsers';
 import { Theme } from '../../components/Theme';
 import { api } from '../../services/api';
 import { AuthHeader } from '../../services/authHeader';
+import { Container } from './styles';
 
 type User = {
 	id: string,
@@ -50,10 +53,15 @@ export function Home(){
 	}, []);
 
 	return (
-		<>
-			<Theme>
+		<Theme>
+			<Container>
+				<label htmlFor="search">
+					<MdOutlineSearch width={24} height={24} opacity={0.6}/>
+					<Inp type='text' id='search' placeholder='Pesquise um usuario aqui!'/>
+				</label>
+
 				<ListUsers users={users}/>
-			</Theme>
-		</>
+			</Container>
+		</Theme>
 	);
 }

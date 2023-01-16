@@ -3,6 +3,7 @@ import { Navigate, Outlet, Route, Routes as Switch, useLocation } from 'react-ro
 import { useContextAuth } from './contexts/useAuth';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
+import { RamdomDog } from './pages/RamdomDog';
 import { SignUp } from './pages/SignUp';
 
 interface ProtectedRouteProps{
@@ -30,6 +31,7 @@ export function Routes(){
 			<Route path='/signup' element={<SignUp />}></Route>
 			<Route element={<ProtectedRoute />}>
 				<Route path='/home' element={<Home />}></Route>
+				<Route path='/ramdom-dog' element={<RamdomDog />}></Route>
 			</Route>
 			<Route path="*" element=''></Route>
 		</Switch>
