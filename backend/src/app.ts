@@ -1,4 +1,5 @@
 import express from 'express';
+import 'express-async-errors';
 import CORS from 'cors';
 import helmet from 'helmet';
 import routes from './app/routes';
@@ -7,7 +8,7 @@ import { ConnectDb } from './app/database';
 const app = express();
 
 app.use(CORS());
-app.use(helmet());
+// app.use(helmet());
 app.use(express.json());
 
 //Connection witch mongoDB 

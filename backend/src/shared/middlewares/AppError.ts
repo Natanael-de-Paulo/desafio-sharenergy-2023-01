@@ -11,16 +11,17 @@ export async function AppError (
 	res: Response,
 	next: NextFunction
 ) {
+
 	if (err instanceof BadRequestException) {
 		return res.status(err.status).json({
 			message: err.message
 		});
 	}
 
-	res.status(500).json({
+	return res.status(500).json({
 		status: 'error',
 		message: `Internal Server Error - ${err.message}`
 	});
   
-	return next();
+	next();
 }
