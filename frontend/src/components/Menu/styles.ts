@@ -25,20 +25,16 @@ export const NavContainer = styled.nav`
     }
   }
   
-  ul{
+  ul.itemsDesktop{
     display: flex;
     gap: 2em;
+
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 `;
 
 
-export const MenuMobile = styled.button`
-  border: none;
-  background: transparent;
-  color: ${({theme}) => theme.colors.White };
-  cursor: pointer;
 
-  &:hover{
-    filter: brightness(0.8);
-  }
-`;

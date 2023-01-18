@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import { MdOutlineHome, MdOutlineMenu } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { MenuItem } from '../MenuItem';
-import { MenuMobile, NavContainer } from './styles';
+import { ButtonIconMenu } from './ButtonIconMenu';
+import { MenuMobile } from './MenuMobile';
+import { NavContainer } from './styles';
 
 export function Menu(){
+
+	const [active, setActive] = useState(false);
+
+	const showMenu = () => {
+		setActive(!active);
+	};
 
 	return (
 		<NavContainer>
@@ -14,18 +23,22 @@ export function Menu(){
 				</span> 
 			</Link>
 	
-			{/* <ul className='flex flex-col gap-4'>
+			<ul className='itemsDesktop'>
 				<MenuItem menuTitle="HTTP Cat" path="/home">	
 				</MenuItem>
-				<MenuItem menuTitle="Random Dog" path='/'>
+				<MenuItem menuTitle="Random Dog" path='/ramdom-dog'>
 				</MenuItem>
 				<MenuItem menuTitle="Client Crud" path='/profile'>
 				</MenuItem>
-			</ul> */}
+			</ul>
 
-			<MenuMobile >
+			<ButtonIconMenu showMenu={showMenu}>
 				<MdOutlineMenu size={24}/>
-			</MenuMobile>
+			</ButtonIconMenu>
+
+
+			<MenuMobile active={active} showMenu={showMenu}/>
+			
 		</NavContainer>
 	);
 }

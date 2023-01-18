@@ -1,9 +1,9 @@
+import { Theme } from '../../components/Theme';
+
 export function RamdomDog(){
 	return(
-		<>
-			<div>
-        
-			</div>
-		</>
+		<Theme>
+			
+		</Theme>
 	);
 }
