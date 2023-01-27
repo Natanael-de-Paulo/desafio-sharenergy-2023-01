@@ -187,7 +187,7 @@ Inicie o servidor
 #### Atualizar um cliente
 
 ```http
-  DELETE /v1/client/{client_id}
+  UPDATE /v1/client/{client_id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
