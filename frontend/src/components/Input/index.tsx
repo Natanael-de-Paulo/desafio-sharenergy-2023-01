@@ -1,9 +1,7 @@
 import { InputHTMLAttributes } from 'react';
 import { Inp } from './styles';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string;
-}
+type InputProps =  InputHTMLAttributes<HTMLInputElement> 
 
 export function Input(props : InputProps) {
 	return (
