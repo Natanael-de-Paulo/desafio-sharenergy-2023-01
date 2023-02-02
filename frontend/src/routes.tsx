@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate, Outlet, Route, Routes as Switch, useLocation } from 'react-router-dom';
 import { useContextAuth } from './contexts/useAuth';
 import { Home } from './pages/Home';
+import { HttpCat } from './pages/HttpCat';
 import { Login } from './pages/Login';
 import { RamdomDog } from './pages/RamdomDog';
 import { SignUp } from './pages/SignUp';
@@ -30,6 +31,7 @@ export function Routes(){
 			<Route path='/' element={<Login />}></Route>
 			<Route path='/signup' element={<SignUp />}></Route>
 			<Route element={<ProtectedRoute />}>
+			<Route path='/http-cat' element={<HttpCat />}></Route>
 				<Route path='/home' element={<Home />}></Route>
 				<Route path='/ramdom-dog' element={<RamdomDog />}></Route>
 			</Route>

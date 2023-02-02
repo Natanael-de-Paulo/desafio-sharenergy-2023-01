@@ -24,7 +24,7 @@ export function Menu(){
 			</Link>
 	
 			<ul className='itemsDesktop'>
-				<MenuItem menuTitle="HTTP Cat" path="/home">	
+				<MenuItem menuTitle="HTTP Cat" path="/http-cat">	
 				</MenuItem>
 				<MenuItem menuTitle="Random Dog" path='/ramdom-dog'>
 				</MenuItem>
